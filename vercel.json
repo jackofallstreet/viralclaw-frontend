@@ -1,0 +1,6 @@
+{
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm turbo run build --filter=@viralclawos/landing",
+  "outputDirectory": "apps/landing/.next",
+  "framework": "nextjs"
+}
