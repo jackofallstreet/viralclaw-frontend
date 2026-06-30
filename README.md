@@ -90,7 +90,7 @@ All modules share a persistent memory layer: Qdrant (signal embeddings), Neo4j (
 
 ```bash
 # 1. Clone
-git clone https://github.com/yourusername/viralclawos.git
+git clone https://github.com/viralclawlabs/viralclaw.git
 cd viralclawos
 
 # 2. Install
