@@ -11,7 +11,7 @@ export default function Hero() {
             style={{ animation: "fadeUp 0.6s 0.1s ease forwards", opacity: 0 }}
           >
             <span className="w-4 h-px bg-[var(--accent)] block" />
-            Multi-Signal Intelligence Layer
+            Synchronization Intelligence Layer
           </div>
 
           <h1
