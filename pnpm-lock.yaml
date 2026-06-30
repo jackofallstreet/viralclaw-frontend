@@ -45,16 +45,16 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.28.0
         version: 5.100.10(react@18.3.1)
-      '@viralclawos/agents':
+      '@viralclawxyz/agents':
         specifier: workspace:*
         version: link:../../packages/agents
-      '@viralclawos/core':
+      '@viralclawxyz/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@viralclawos/ui':
+      '@viralclawxyz/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@viralclawos/utils':
+      '@viralclawxyz/utils':
         specifier: workspace:*
         version: link:../../packages/utils
       class-variance-authority:
@@ -97,7 +97,7 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.7(@types/react@18.3.28)
-      '@viralclawos/tsconfig':
+      '@viralclawxyz/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       autoprefixer:
@@ -121,10 +121,10 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.39.0
         version: 2.105.4
-      '@viralclawos/ui':
+      '@viralclawxyz/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@viralclawos/utils':
+      '@viralclawxyz/utils':
         specifier: workspace:*
         version: link:../../packages/utils
       class-variance-authority:
@@ -158,7 +158,7 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.7(@types/react@18.3.28)
-      '@viralclawos/tsconfig':
+      '@viralclawxyz/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       autoprefixer:
@@ -182,13 +182,13 @@ importers:
       '@langchain/core':
         specifier: ^0.2.0
         version: 0.2.36(openai@4.104.0(encoding@0.1.13)(ws@8.20.1(bufferutil@4.1.0)(utf-8-validate@6.0.6))(zod@3.25.76))
-      '@viralclawos/core':
+      '@viralclawxyz/core':
         specifier: workspace:*
         version: link:../core
-      '@viralclawos/integrations':
+      '@viralclawxyz/integrations':
         specifier: workspace:*
         version: link:../integrations
-      '@viralclawos/memory':
+      '@viralclawxyz/memory':
         specifier: workspace:*
         version: link:../memory
       langchain:
@@ -214,7 +214,7 @@ importers:
 
   packages/integrations:
     dependencies:
-      '@viralclawos/core':
+      '@viralclawxyz/core':
         specifier: workspace:*
         version: link:../core
       zod:
@@ -230,7 +230,7 @@ importers:
       '@qdrant/js-client-rest':
         specifier: ^1.9.0
         version: 1.18.0(typescript@5.9.3)
-      '@viralclawos/core':
+      '@viralclawxyz/core':
         specifier: workspace:*
         version: link:../core
       ioredis:
@@ -254,7 +254,7 @@ importers:
 
   packages/ui:
     dependencies:
-      '@viralclawos/utils':
+      '@viralclawxyz/utils':
         specifier: workspace:*
         version: link:../utils
       class-variance-authority:
