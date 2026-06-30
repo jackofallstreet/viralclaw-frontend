@@ -5,13 +5,13 @@ export function Belief() {
         // What we believe
       </p>
       <p className="font-cond text-[clamp(1.8rem,5vw,3.8rem)] font-semibold uppercase leading-[1.08]" style={{ color: "var(--text-1)" }}>
-        The future belongs to creators<br />
-        <span style={{ color: "var(--accent)" }}>who operate like organizations</span><br />
-        <span className="font-light" style={{ color: "var(--text-3)" }}>without building teams.</span>
+        The edge belongs to those<br />
+        <span style={{ color: "var(--accent)" }}>who see on-chain first</span><br />
+        <span className="font-light" style={{ color: "var(--text-3)" }}>and move before the crowd.</span>
       </p>
       <div className="w-px h-[46px] mx-auto my-8" style={{ background: "var(--border-2)" }} />
       <p className="font-mono text-[0.58rem] tracking-[0.17em] uppercase" style={{ color: "var(--text-4)" }}>
-        ViralClaw — Infrastructure for AI-native creators
+        ViralClaw — Multi-Signal Intelligence Layer
       </p>
     </div>
   );
@@ -26,8 +26,10 @@ export function Footer() {
         </div>
         <ul className="flex gap-6 list-none flex-wrap justify-center">
           {[
-            { href: "#agents", label: "Agents" },
-            { href: "#access", label: "Early access" },
+            { href: "#how",     label: "How it works" },
+            { href: "#signals", label: "Signals" },
+            { href: "#access",  label: "Early access" },
+            { href: "/docs",    label: "Docs" },
           ].map((l) => (
             <li key={l.href}>
               <a

@@ -1,52 +1,52 @@
 "use client";
 
-const agents = [
+const modules = [
   {
     id: "orchestrator",
-    label: "Orchestrator",
-    role: "Mission decomposition + routing",
+    label: "Signal Orchestrator",
+    role: "Pipeline coordination + routing",
     state: "building",
     note: "LangGraph runtime",
   },
   {
-    id: "trend",
-    label: "Trend & Intelligence",
-    role: "YouTube signal detection",
+    id: "onchain",
+    label: "On-Chain Scanner",
+    role: "17-chain real-time indexing",
     state: "building",
-    note: "YouTube API + niche analysis",
+    note: "ETH, SOL, BASE, ARB core chains",
   },
   {
-    id: "strategy",
-    label: "Strategy",
-    role: "Content briefs + calendars",
+    id: "social",
+    label: "Social Velocity Engine",
+    role: "Narrative momentum tracking",
+    state: "building",
+    note: "CT, Farcaster, Telegram",
+  },
+  {
+    id: "scoring",
+    label: "Trend Scoring Model",
+    role: "Signal strength + correlation",
     state: "soon",
-    note: "Depends on Intelligence",
+    note: "Depends on Scanner + Social",
   },
   {
-    id: "production",
-    label: "Production",
-    role: "Scripts, threads, Shorts",
+    id: "alpha",
+    label: "Alpha Engine",
+    role: "Degen participation briefs",
     state: "soon",
-    note: "Depends on Strategy",
+    note: "Depends on Scoring Model",
   },
   {
-    id: "distribution",
-    label: "Distribution",
-    role: "Schedule + publish",
+    id: "content",
+    label: "Content Engine",
+    role: "Creator briefs + angles",
     state: "soon",
-    note: "Approval gate required",
+    note: "Depends on Scoring Model",
   },
   {
-    id: "analytics",
-    label: "Analytics",
-    role: "Performance cycles",
-    state: "soon",
-    note: "Post-distribution",
-  },
-  {
-    id: "revenue",
-    label: "Revenue",
-    role: "Sponsorship + monetization",
+    id: "memory",
+    label: "Signal Memory",
+    role: "Outcome tracking + model feedback",
     state: "planned",
     note: "Phase 2",
   },
@@ -70,37 +70,37 @@ const stateConfig = {
   },
 };
 
-export default function AgentStatusGrid() {
+export default function SignalModuleGrid() {
   return (
     <div className="border border-[var(--border)] overflow-hidden">
       <div className="bg-[var(--surface)] px-4 py-2 border-b border-[var(--border)] flex items-center justify-between">
         <span className="font-mono text-[0.52rem] tracking-[0.12em] uppercase text-[var(--low)]">
-          Agent swarm — build status
+          Signal modules — build status
         </span>
         <span className="font-mono text-[0.48rem] tracking-[0.1em] uppercase text-[var(--dim)]">
-          {agents.filter(a => a.state === "building").length} in progress · {agents.filter(a => a.state === "soon").length} queued
+          {modules.filter(m => m.state === "building").length} in progress · {modules.filter(m => m.state === "soon").length} queued
         </span>
       </div>
       <div className="divide-y divide-[var(--border)]">
-        {agents.map((agent) => {
-          const cfg = stateConfig[agent.state as keyof typeof stateConfig];
+        {modules.map((mod) => {
+          const cfg = stateConfig[mod.state as keyof typeof stateConfig];
           return (
             <div
-              key={agent.id}
+              key={mod.id}
               className="bg-[var(--carbon)] px-4 py-3 flex items-center gap-4 hover:bg-[var(--surface)] transition-colors duration-150"
             >
               <span className={`w-[5px] h-[5px] rounded-full shrink-0 ${cfg.dot}`} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3">
                   <span className="font-cond text-[0.82rem] font-semibold uppercase tracking-[0.04em] text-[var(--white)]">
-                    {agent.label}
+                    {mod.label}
                   </span>
                   <span className="font-mono text-[0.48rem] text-[var(--dim)]">·</span>
-                  <span className="font-mono text-[0.52rem] text-[var(--low)] truncate">{agent.role}</span>
+                  <span className="font-mono text-[0.52rem] text-[var(--low)] truncate">{mod.role}</span>
                 </div>
               </div>
               <span className="font-mono text-[0.44rem] tracking-[0.08em] uppercase text-[var(--dim)] hidden sm:block">
-                {agent.note}
+                {mod.note}
               </span>
               <span className={`font-mono text-[0.44rem] tracking-[0.08em] uppercase px-2 py-[3px] border shrink-0 ${cfg.badge}`}>
                 {cfg.label}

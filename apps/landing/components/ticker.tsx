@@ -1,12 +1,14 @@
 const items = [
-  { label: "Trend agent — monitoring YouTube signals", color: "crimson" as const },
-  { label: "Audience intelligence — creator memory updated", color: "cyan" as const },
-  { label: "Script agent — 3 briefs queued for review", color: "none" as const },
-  { label: "Analytics agent — processing performance cycle", color: "cyan" as const },
-  { label: "Distribution — 5 platforms scheduled", color: "none" as const },
-  { label: "YouTube format intelligence — 12K channels indexed", color: "crimson" as const },
-  { label: "Memory system — brand model updated", color: "cyan" as const },
-  { label: "Optimization cycle — complete", color: "none" as const },
+  { label: "On-chain signal — ETH whale cluster detected", color: "crimson" as const },
+  { label: "Trend velocity — Solana memecoin narrative +340%", color: "cyan" as const },
+  { label: "Alpha brief — cross-chain liquidity rotation queued", color: "none" as const },
+  { label: "Content brief — Base ecosystem narrative ready", color: "cyan" as const },
+  { label: "Signal engine — 17 chains indexed in real time", color: "none" as const },
+  { label: "Degen alpha — Arbitrum GMX whale accumulation", color: "crimson" as const },
+  { label: "Intelligence layer — trend model updated", color: "cyan" as const },
+  { label: "Cross-ecosystem scan — Sui + Aptos correlated", color: "none" as const },
+  { label: "Content opportunity — viral narrative window open", color: "crimson" as const },
+  { label: "Signal score 9.4 — Pump.fun velocity spike", color: "cyan" as const },
 ];
 
 const dotColors = {

@@ -36,9 +36,10 @@ export default function Nav() {
       <div className="flex items-center gap-3">
         <ul className="hidden md:flex items-center gap-1 list-none">
           {[
-            { href: "#agents", label: "Agents" },
-            { href: "/docs",   label: "Docs" },
-            { href: "#access", label: "Early access" },
+            { href: "#how",      label: "How it works" },
+            { href: "#signals",  label: "Signals" },
+            { href: "/docs",     label: "Docs" },
+            { href: "#access",   label: "Early access" },
           ].map((item) => (
             <li key={item.href}>
               <Link
@@ -61,7 +62,7 @@ export default function Nav() {
           className="font-mono text-[0.6rem] font-medium tracking-[0.12em] uppercase no-underline px-4 py-2 transition-colors"
           style={{ background: "var(--accent)", color: "#fff" }}
         >
-          Join waitlist →
+          Get early access →
         </Link>
       </div>
     </nav>

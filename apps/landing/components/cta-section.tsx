@@ -18,7 +18,7 @@ function WaitlistButton() {
           </div>
           <p className="font-mono text-[0.65rem] text-[var(--text-2)] leading-[1.6]">{email}</p>
           <p className="font-mono text-[0.57rem] text-[var(--text-3)] mt-2">
-            We'll reach out when your spot opens.
+            We'll reach out when your spot opens. Alpha first.
           </p>
         </div>
         <button
@@ -42,7 +42,7 @@ function WaitlistButton() {
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
         </svg>
-        Join waitlist with email →
+        Get early access →
       </button>
       <p className="font-mono text-[0.54rem] tracking-[0.1em] text-[var(--text-4)] uppercase mt-4">
         No credit card · No spam · Invite only
@@ -51,18 +51,17 @@ function WaitlistButton() {
   );
 }
 
-// Fallback when Privy isn't configured (no NEXT_PUBLIC_PRIVY_APP_ID)
 function WaitlistFallback() {
   return (
     <div className="max-w-[380px] mx-auto">
       <a
-        href="mailto:hello@viralclaw.com?subject=Waitlist"
+        href="mailto:hello@viralclaw.com?subject=Early Access"
         className="w-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] transition-colors px-8 py-[1rem] font-mono text-[0.68rem] font-medium tracking-[0.14em] uppercase text-[var(--text-1)] flex items-center justify-center gap-3 no-underline"
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
         </svg>
-        Join waitlist →
+        Get early access →
       </a>
       <p className="font-mono text-[0.54rem] tracking-[0.1em] text-[var(--text-4)] uppercase mt-4">
         No credit card · No spam · Invite only
@@ -90,13 +89,13 @@ export default function CtaSection() {
       </div>
 
       <h2 className="font-cond text-[clamp(3rem,10vw,8rem)] font-extrabold uppercase leading-[0.88] tracking-tight text-[var(--text-1)] mb-5">
-        Build your<br />
-        <span className="text-[var(--accent)]">EDGE.</span>
+        See it<br />
+        <span className="text-[var(--accent)]">FIRST.</span>
       </h2>
 
       <p className="text-[clamp(0.88rem,2vw,0.96rem)] text-[var(--text-2)] max-w-[44ch] mx-auto mb-8 leading-[1.8] font-light">
-        We're opening early access to a small cohort of creators. If you're a YouTuber, educator,
-        or lean content operator ready to run on autonomous infrastructure — join the waitlist.
+        We're opening early access to a small cohort of degens and creators ready to operate
+        on multi-signal intelligence. Join the waitlist — alpha and content edge before anyone else.
       </p>
 
       {hasPrivy ? <WaitlistButton /> : <WaitlistFallback />}

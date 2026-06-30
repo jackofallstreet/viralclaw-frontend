@@ -4,10 +4,9 @@ import Hero from "@/components/hero";
 import IntelligenceSection from "@/components/intelligence-section";
 import HowItWorks from "@/components/how-it-works";
 import AgentSwarm from "@/components/agent-swarm";
-import Belief from "@/components/belief";
+import { Belief, Footer } from "@/components/sections";
 import Pricing from "@/components/pricing";
 import CtaSection from "@/components/cta-section";
-import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (

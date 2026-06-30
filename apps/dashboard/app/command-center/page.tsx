@@ -1,13 +1,13 @@
-import AgentStatusGrid from "@/components/agents/agent-status-grid";
-import MissionInput from "@/components/agents/mission-input";
+import SignalModuleGrid from "@/components/agents/agent-status-grid";
+import SignalQueryInput from "@/components/agents/mission-input";
 
 const pipeline = [
-  { id: "input",    label: "Mission",         sub: "Goal → decomposition",          state: "building", gate: false },
-  { id: "intel",    label: "Intelligence",     sub: "YouTube + social signals",      state: "building", gate: false },
-  { id: "strategy", label: "Strategy",         sub: "Briefs + calendar",             state: "soon",     gate: true  },
-  { id: "prod",     label: "Production",       sub: "Scripts · threads · Shorts",    state: "soon",     gate: true  },
-  { id: "dist",     label: "Distribution",     sub: "Schedule + publish",            state: "soon",     gate: true  },
-  { id: "analytics",label: "Analytics",        sub: "Performance → Brand DNA",       state: "soon",     gate: false },
+  { id: "ingest",   label: "Ingest",       sub: "On-chain + social",           state: "building", gate: false },
+  { id: "score",    label: "Score",         sub: "Velocity + correlation",       state: "building", gate: false },
+  { id: "interpret",label: "Interpret",     sub: "Narrative + window est.",      state: "soon",     gate: true  },
+  { id: "alpha",    label: "Alpha brief",   sub: "Degen participation",          state: "soon",     gate: true  },
+  { id: "content",  label: "Content brief", sub: "Creator intelligence",         state: "soon",     gate: true  },
+  { id: "memory",   label: "Memory",        sub: "Outcome → model update",       state: "planned",  gate: false },
 ];
 
 const stateColor = {
@@ -32,14 +32,14 @@ export default function CommandCenterPage() {
           <div className="flex items-center gap-2 mb-2">
             <span className="w-[4px] h-[4px] rounded-full bg-[var(--amber)] animate-[blinkA_2s_ease_infinite]" />
             <span className="font-mono text-[0.5rem] tracking-[0.16em] uppercase text-[var(--amber)]">
-              In development
+              Signal engine building
             </span>
           </div>
           <h1 className="font-cond text-[clamp(1.5rem,4vw,2.2rem)] font-bold uppercase leading-none text-[var(--white)] tracking-[0.02em]">
-            Command Center
+            Intelligence Layer
           </h1>
           <p className="text-[0.78rem] text-[var(--low)] mt-2 font-light">
-            Infrastructure overview. Agents are being built — nothing is live yet.
+            Signal pipeline overview. Modules are being built — nothing is live yet.
           </p>
         </div>
         <div className="hidden md:flex items-center gap-2 font-mono text-[0.48rem] tracking-[0.1em] uppercase text-[var(--dim)] border border-[var(--border)] px-3 py-2">
@@ -53,7 +53,7 @@ export default function CommandCenterPage() {
       <div className="border border-[var(--border)] overflow-hidden">
         <div className="bg-[var(--surface)] px-4 py-2 border-b border-[var(--border)]">
           <span className="font-mono text-[0.52rem] tracking-[0.12em] uppercase text-[var(--low)]">
-            Agent pipeline — build progress
+            Signal pipeline — build progress
           </span>
         </div>
         <div className="bg-[var(--carbon)] p-5">
@@ -61,13 +61,11 @@ export default function CommandCenterPage() {
           <div className="hidden lg:flex items-center gap-0">
             {pipeline.map((step, i) => (
               <div key={step.id} className="flex items-center flex-1 min-w-0">
-                {/* Node */}
                 <div className="flex flex-col items-center flex-1 min-w-0 relative">
-                  {/* Gate marker */}
                   {step.gate && (
                     <div className="absolute -top-1 right-[calc(50%-8px)] font-mono text-[0.38rem] tracking-[0.06em] uppercase text-[var(--amber)] flex items-center gap-[3px]">
                       <span>⊕</span>
-                      <span>gate</span>
+                      <span>review</span>
                     </div>
                   )}
                   <div
@@ -86,7 +84,6 @@ export default function CommandCenterPage() {
                     </div>
                   </div>
                 </div>
-                {/* Connector */}
                 {i < pipeline.length - 1 && (
                   <div className="flex items-center gap-0 shrink-0 mx-1 mt-[-16px]">
                     <div className="w-8 h-px bg-[var(--border)]" />
@@ -101,7 +98,6 @@ export default function CommandCenterPage() {
           <div className="lg:hidden space-y-0">
             {pipeline.map((step, i) => (
               <div key={step.id} className="flex gap-3">
-                {/* Left: dot + line */}
                 <div className="flex flex-col items-center">
                   <div
                     className="w-[5px] h-[5px] rounded-full shrink-0 mt-[10px]"
@@ -111,7 +107,6 @@ export default function CommandCenterPage() {
                     <div className="w-px flex-1 bg-[var(--border)] mt-1" style={{ minHeight: 24 }} />
                   )}
                 </div>
-                {/* Right: content */}
                 <div className="pb-4 flex-1 min-w-0">
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="font-cond text-[0.78rem] font-semibold uppercase tracking-[0.04em] text-[var(--white)]">
@@ -119,7 +114,7 @@ export default function CommandCenterPage() {
                     </span>
                     {step.gate && (
                       <span className="font-mono text-[0.4rem] tracking-[0.06em] uppercase text-[var(--amber)] border border-[var(--amber-border)] px-[5px] py-[2px]">
-                        approval gate
+                        review gate
                       </span>
                     )}
                     <span className={`font-mono text-[0.4rem] tracking-[0.06em] uppercase px-[5px] py-[2px] border ${stateBadge[step.state as keyof typeof stateBadge]}`}>
@@ -134,14 +129,13 @@ export default function CommandCenterPage() {
         </div>
       </div>
 
-      {/* Mission input */}
-      <MissionInput />
+      {/* Signal query input */}
+      <SignalQueryInput />
 
-      {/* Agent status */}
+      {/* Module status */}
       <section>
-        <AgentStatusGrid />
+        <SignalModuleGrid />
       </section>
-
 
     </div>
   );

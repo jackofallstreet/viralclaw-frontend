@@ -1,38 +1,38 @@
 const steps = [
   {
-    n: "01 — Research",
-    name: "Trend & Signal Detection",
-    desc: "Monitors YouTube performance patterns across thousands of channels in your niche, plus social trends and narrative cycles — and interprets them into clear recommendations.",
+    n: "01 — Capture",
+    name: "Multi-Signal Ingestion",
+    desc: "Monitors on-chain activity across 17 blockchains — wallet flows, bridge volumes, DEX patterns, contract deployments — plus social velocity, narrative cycles, and sentiment across Crypto Twitter, Farcaster, and Telegram.",
     cy: false,
   },
   {
-    n: "02 — Strategy",
-    name: "Content Planning",
-    desc: "Converts intelligence into structured briefs — titles, hooks, angles, timing windows — calibrated to your Brand DNA and what's actually working in your niche right now.",
+    n: "02 — Score",
+    name: "Trend Velocity Engine",
+    desc: "Proprietary scoring weights signal strength, wallet reputation, cross-chain correlation, and social lag. Surfaces the 0.3% of signals that matter — before they hit timelines. Every signal scored in real time.",
     cy: false,
   },
   {
-    n: "03 — Production",
-    name: "Repurposing Engine",
-    desc: "One input becomes many assets. Adapts your content into platform-specific formats — threads, Shorts, carousels, emails — without extra production effort from you.",
+    n: "03 — Interpret",
+    name: "Narrative Intelligence",
+    desc: "Maps why a trend is moving — not just that it is. Connects on-chain evidence to emerging narratives, identifying the story behind the signal and how long the window is likely to remain open.",
     cy: false,
   },
   {
-    n: "04 — Distribution",
-    name: "Intelligent Publishing",
-    desc: "Schedules and publishes across platforms at optimal windows. Platform-native formatting handled automatically. You approve, the agent executes.",
+    n: "04 — Alpha Brief",
+    name: "Degen Participation",
+    desc: "High-conviction signals become structured alpha briefs: what's moving, which chains, entry context, estimated window, and risk factors. Built for degens who need to act fast and with conviction.",
     cy: true,
   },
   {
-    n: "05 — Analysis",
-    name: "Performance Intelligence",
-    desc: "Processes results each cycle, identifies what worked and why, and feeds that understanding back into your Brand DNA — so the system gets sharper over time.",
+    n: "05 — Content Brief",
+    name: "Creator Intelligence",
+    desc: "The same signal becomes a content opportunity: narrative angle, audience hook, supporting on-chain evidence, and optimal publish window. First-mover content before the narrative goes mainstream.",
     cy: true,
   },
   {
-    n: "06 — Revenue",
-    name: "Monetization Operations",
-    desc: "Surfaces monetization opportunities — sponsorship matches, product timing, and deal flow — and manages basic revenue workflows without manual input.",
+    n: "06 — Feedback Loop",
+    name: "Signal Memory",
+    desc: "Outcomes feed back into the intelligence layer — which signals led to real alpha, which narratives had legs, what windows closed early. The system gets sharper with every cycle.",
     cy: true,
   },
 ];
@@ -46,11 +46,11 @@ export default function HowItWorks() {
             // How it works
           </div>
           <h2 className="font-cond text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[0.95] uppercase text-[var(--text-1)] mb-4">
-            You set the goal.<br />The <span className="text-[var(--accent)]">system</span> runs the loop.
+            Signal in.<br /><span className="text-[var(--accent)]">Alpha and content</span> out.
           </h2>
           <p className="text-[clamp(0.87rem,2vw,0.96rem)] text-[var(--text-2)] leading-[1.8] max-w-[52ch] mt-2">
-            Record a brain dump or set a high-level goal. The agents take it from there — researching, planning,
-            producing, distributing, and learning from every cycle.
+            From raw on-chain data to actionable intelligence in under 400ms. One pipeline.
+            Two outputs. Built for the people who need to move before the crowd.
           </p>
         </div>
 
@@ -58,12 +58,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.n}
-              className={`group bg-[var(--bg)] p-[clamp(1.4rem,4vw,2rem)] relative hover:bg-[var(--bg-3)] transition-colors duration-[0.25s] ${
-                step.cy ? "before:bg-[var(--cyan-light)]" : "before:bg-[var(--accent)]"
-              }`}
-              style={{
-                position: "relative",
-              }}
+              className={`group bg-[var(--bg)] p-[clamp(1.4rem,4vw,2rem)] relative hover:bg-[var(--bg-3)] transition-colors duration-[0.25s]`}
             >
               <div
                 className="absolute top-0 left-0 right-0 h-[2px] scale-x-0 origin-left transition-transform duration-[0.35s] ease-out group-hover:scale-x-100"

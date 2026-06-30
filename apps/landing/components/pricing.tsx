@@ -1,42 +1,44 @@
 const tiers = [
   {
-    tier: "Solo",
-    tag: "For independent creators",
-    desc: "Research, strategy, production, and distribution — all six agents running your content operation end to end.",
+    tier: "Degen",
+    tag: "For on-chain alpha hunters",
+    desc: "Full signal stack — on-chain scanner, cross-ecosystem correlation, trend scoring, and structured alpha briefs delivered before the crowd arrives.",
     features: [
-      "Trend & Intelligence Agent",
-      "Strategy Agent — content briefs & calendars",
-      "Production Agent — scripts, threads, Shorts",
-      "Distribution — multi-platform scheduling",
-      "Analytics Agent — performance cycles",
+      "On-chain scanner — 17 chains in real time",
+      "Cross-ecosystem signal correlation",
+      "Trend velocity scoring engine",
+      "Structured alpha briefs with entry context",
+      "Sub-400ms signal delivery via webhook / Telegram",
+      "Signal history and outcome tracking",
     ],
     featured: false,
   },
   {
-    tier: "Pro",
+    tier: "Creator",
     tag: "Most requested",
-    desc: "Everything in Solo plus persistent Brand DNA memory, Revenue Agent, and unlimited output volume.",
+    desc: "Everything in Degen plus content intelligence — narrative briefs, publish-window timing, content angles, and on-chain evidence packaged for your audience.",
     features: [
-      "Everything in Solo",
-      "Brand DNA — persistent creator memory",
-      "Revenue Agent — monetization & sponsorship ops",
-      "Unlimited briefs, assets, and analyses",
-      "Extended platform integrations",
+      "Everything in Degen",
+      "Narrative intelligence — trend-to-content pipeline",
+      "Content briefs with on-chain source links",
+      "Optimal publish-window recommendations",
+      "Thread and post angle variants",
+      "Engagement prediction per narrative",
       "Priority support",
     ],
     featured: true,
   },
   {
-    tier: "Team",
-    tag: "For lean content teams",
-    desc: "Multi-profile support, shared memory, team review workflows, and custom agent configuration.",
+    tier: "Studio",
+    tag: "For teams and funds",
+    desc: "Multi-seat access, API integration, custom signal configuration, and private intelligence layers built to your ecosystem focus.",
     features: [
-      "Everything in Pro",
-      "Up to 3 creator profiles",
-      "Team review & approval flows",
-      "Custom agent configuration",
-      "Advanced Brand DNA per profile",
-      "Dedicated onboarding",
+      "Everything in Creator",
+      "Multi-seat team access",
+      "REST API + webhook endpoints",
+      "Custom chain and ecosystem filters",
+      "Private intelligence layer configuration",
+      "Dedicated onboarding and support",
     ],
     featured: false,
   },
@@ -55,8 +57,8 @@ export default function Pricing() {
             <span className="text-[var(--accent)]">Pricing drops</span> at launch.
           </h2>
           <p className="text-[clamp(0.87rem,2vw,0.96rem)] text-[var(--text-2)] leading-[1.8] max-w-[52ch] mt-2">
-            We're not publishing prices yet — the product isn't live. Join the waitlist and you'll be the first
-            to know. Early access cohort gets founder pricing, locked in permanently.
+            Not publishing prices yet — the product isn't live. Join the waitlist and you'll be the
+            first to know. Early access cohort gets founder pricing, locked in permanently.
           </p>
         </div>
 
@@ -79,7 +81,6 @@ export default function Pricing() {
                 {tier.tag}
               </div>
 
-              {/* Price placeholder */}
               <div className="font-cond text-[clamp(1.4rem,4vw,2rem)] font-bold leading-[1] text-[var(--text-4)] mb-1 uppercase tracking-[0.04em]">
                 TBA at launch
               </div>

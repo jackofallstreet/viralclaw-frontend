@@ -31,25 +31,26 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://viralclaw.xyz"),
 
   title: {
-    default: "ViralClaw — AI-native infrastructure for creators",
+    default: "ViralClaw — Multi-Signal Intelligence Layer",
     template: "%s | ViralClaw",
   },
 
   description:
-    "Real-time YouTube and social signals turned into content strategy and autonomous actions.",
+    "On-chain intelligence that captures viral trends and turns them into cross-ecosystem alpha and content opportunities.",
 
   applicationName: "ViralClaw",
 
   keywords: [
     "ViralClaw",
-    "AI creator tools",
-    "content automation",
-    "YouTube intelligence",
-    "creator infrastructure",
-    "social analytics",
-    "AI agents",
-    "content strategy",
-    "creator economy",
+    "on-chain intelligence",
+    "crypto alpha",
+    "viral trends",
+    "cross-ecosystem",
+    "DeFi signals",
+    "content intelligence",
+    "blockchain analytics",
+    "Web3 alpha",
+    "trend detection",
   ],
 
   authors: [{ name: "ViralClaw" }],
@@ -75,13 +76,9 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: [
-      { url: "/viralclaw_icon.png", type: "image/png" },
-    ],
+    icon: [{ url: "/viralclaw_icon.png", type: "image/png" }],
     shortcut: ["/viralclaw_icon.png"],
-    apple: [
-      { url: "/viralclaw_icon.png", type: "image/png" },
-    ],
+    apple: [{ url: "/viralclaw_icon.png", type: "image/png" }],
   },
 
   openGraph: {
@@ -89,9 +86,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://viralclaw.xyz",
     siteName: "ViralClaw",
-    title: "ViralClaw — AI-native infrastructure for creators",
+    title: "ViralClaw — Multi-Signal Intelligence Layer",
     description:
-      "Real-time signals. Autonomous execution. The operating system for the attention economy.",
+      "Viral trends. Cross-chain alpha. Content opportunities. Before anyone else.",
     images: [
       {
         url: "/viralclaw_icon.png",
@@ -104,9 +101,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "ViralClaw — AI-native infrastructure for creators",
+    title: "ViralClaw — Multi-Signal Intelligence Layer",
     description:
-      "Real-time signals. Autonomous execution. The operating system for the attention economy.",
+      "Viral trends. Cross-chain alpha. Content opportunities. Before anyone else.",
     creator: "@viralclaw",
     images: ["/viralclaw_icon.png"],
   },
@@ -133,7 +130,6 @@ export const viewport: Viewport = {
   ],
 };
 
-// Prevents flash of wrong theme on load
 const themeScript = `
   (function() {
     try {
@@ -158,7 +154,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${ibmPlexMono.variable} ${barlow.variable} ${barlowCondensed.variable}`}
     >
       <head>
-        {/* Inline script runs before paint — prevents theme flash */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
